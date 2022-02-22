@@ -1,0 +1,58 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Isrc/",
+      "-g",
+      "-c",
+      "-o",
+      "src/geometry/line.o",
+      "src/geometry/line.cpp"
+    ],
+    "directory": "/home/monenvoy/programming/c++/tga-image",
+    "file": "/home/monenvoy/programming/c++/tga-image/src/geometry/line.cpp",
+    "output": "/home/monenvoy/programming/c++/tga-image/src/geometry/line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Isrc/",
+      "-g",
+      "-c",
+      "-o",
+      "src/geometry/draw.o",
+      "src/geometry/draw.cpp"
+    ],
+    "directory": "/home/monenvoy/programming/c++/tga-image",
+    "file": "/home/monenvoy/programming/c++/tga-image/src/geometry/draw.cpp",
+    "output": "/home/monenvoy/programming/c++/tga-image/src/geometry/draw.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Isrc/",
+      "-g",
+      "-c",
+      "-o",
+      "src/geometry/polygon.o",
+      "src/geometry/polygon.cpp"
+    ],
+    "directory": "/home/monenvoy/programming/c++/tga-image",
+    "file": "/home/monenvoy/programming/c++/tga-image/src/geometry/polygon.cpp",
+    "output": "/home/monenvoy/programming/c++/tga-image/src/geometry/polygon.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Isrc/",
+      "-g",
+      "-c",
+      "-o",
+      "src/tga/TgaImage.o",
+      "src/tga/TgaImage.cpp"
+    ],
+    "directory": "/home/monenvoy/programming/c++/tga-image",
+    "file": "/home/monenvoy/programming/c++/tga-image/src/tga/TgaImage.cpp",
+    "output": "/home/monenvoy/programming/c++/tga-image/src/tga/TgaImage.o"
+  }
+]
