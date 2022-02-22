@@ -1,2 +1,2 @@
-![Convex](img/convex.tga)
-![Non-convex](img/nonconvex.tga)
+![Convex](img/convex.jpg)
+![Non-convex](img/nonconvex.jpg)
