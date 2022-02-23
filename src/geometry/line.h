@@ -21,3 +21,9 @@ enum Position2Line {
 // Определение расположения точки p относительно
 // отрезка ab
 int classify(glm::vec2 p, glm::vec2 a, glm::vec2 b);
+
+// Find the intersection of two lines and write it to {p}.
+// If none was found return 0
+// If lines are the same, return 1
+// If lines intersect, return 2
+int lines_intersect(glm::vec2 n1, glm::vec2 n2, float d1, float d2, glm::vec2& p);
