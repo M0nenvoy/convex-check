@@ -8,5 +8,5 @@ plotter 10 10 390 10 390 290
 ```
 
 ### Examples
-![Convex](img/convex.jpg)
-![Non-convex](img/nonconvex.jpg)
+![Convex](/img/convex.jpg)
+![Non-convex](/img/nonconvex.jpg)
