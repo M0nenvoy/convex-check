@@ -6,5 +6,6 @@ Draw the convex hull of the given points
 Same figure
 - Drawn via the **simple** plotter
 <img src="/img/nonconvex.jpg" width=200px>
-- Drawn via the **convex** plotter
+
+- Drawn via the __convex__ plotter
 <img src="/img/star-hull.jpg" width=200px>
