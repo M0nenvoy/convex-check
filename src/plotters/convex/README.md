@@ -6,7 +6,9 @@ Draw the convex hull of the given points
 ```
 sh scripts/triangle.sh bin/simple
 ```
+
 <img src="/img/nonconvex.jpg" width=200px>
+
 ```
 sh scripts/triangle.sh bin/convex
 ```
