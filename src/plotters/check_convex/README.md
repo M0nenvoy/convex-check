@@ -1,12 +1,7 @@
-## Draw a polygon on a tga image
+## Check convex
 
-If convex - highlight green, otherwise - red.  
-### Use
-Specify the coordinates of each dot via command line arguments as such:
-```
-plotter 10 10 390 10 390 290
-```
-
+Connect points.
+If the resulting figure is convex - highlight green, otherwise - red.  
 ### Examples
 ![Convex](/img/convex.jpg)
 ![Non-convex](/img/nonconvex.jpg)
