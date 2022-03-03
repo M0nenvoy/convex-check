@@ -18,10 +18,10 @@ bin/convex 100 100 200 100 100 200
 
 ## Scripts
 Specifying every point is very tedious. Instead, you can use the
-[scripts](scripts/README.md)
+[scripts](scripts)
 
 ## List of plotters
 
-- [simple](src/plotters/simple/README.md)
-- [convex](src/plotters/convex/README.md)
-- [check_convex](src/plotters/check_convex/README.md)
+- [simple](src/plotters/simple)
+- [convex](src/plotters/convex)
+- [check_convex](src/plotters/check_convex)
