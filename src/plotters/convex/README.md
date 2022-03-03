@@ -3,9 +3,12 @@
 Draw the convex hull of the given points
 
 ### Examples
-Same figure
-- Drawn via the **simple** plotter
+```
+sh scripts/triangle.sh bin/simple
+```
 <img src="/img/nonconvex.jpg" width=200px>
+```
+sh scripts/triangle.sh bin/convex
+```
 
-- Drawn via the __convex__ plotter
 <img src="/img/star-hull.jpg" width=200px>
