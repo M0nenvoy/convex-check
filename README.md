@@ -11,8 +11,7 @@ with an array of 2d points and draw an image using them.
 ```
 make convex
 ```
-- Run supplying points via cmd arguments
-- 
+- Run supplying points via the cmd arguments
 ```
 bin/convex 100 100 200 100 100 200
 ```
