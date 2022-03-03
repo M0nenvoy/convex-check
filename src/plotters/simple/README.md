@@ -3,4 +3,4 @@
 Simply connect the points in the order in which they are given
 
 ### Examples
-![Star](/img/nonconvex.jpg)
+<img src="/img/nonconvex.jpg" width=200px>
