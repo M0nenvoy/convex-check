@@ -39,10 +39,16 @@ glm::ivec2 next2top(std::stack<glm::ivec2>& s) {
 }
 
 
-int orientation(glm::ivec2 p, glm::ivec2 q, glm::ivec2 r) {
-    const int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y * q.y);
-    if (abs(val) == 0) return COLLINEAER;
-    return (val > 0) ? CW : CCW;
+int orientation(glm::ivec2 p0, glm::ivec2 p1, glm::ivec2 p2) {
+    glm::ivec2 p01 = p0 - p1;
+    glm::ivec2 p02 = p0 - p2;
+
+    // Z-coordinate of the crossproduct [p01 x p02].
+    const int z = p01.x * p02.y - p01.y * p02.x;
+
+    if (z == 0) return COLLINEAER;
+    if (z > 0)  return CW;
+    return CCW;
 }
 
 // Graham compare
@@ -52,7 +58,7 @@ int gcompare(const glm::ivec2 p1, const glm::ivec2 p2) {
         return      ((p0.x * p0.x - p2.x * p2.x) + (p0.y * p0.y - p2.y * p2.y))
                 <   ((p0.x * p0.x - p1.x * p1.x) + (p0.y * p0.y - p1.y * p1.y))
                 ? 0 : 1;
-    return orient == CCW ? 0 : 1;
+    return orient == CCW ? 1 : 0;
 }
 
 std::stack<glm::ivec2> graham_scan(glm::ivec2 pin[], int n) {
@@ -63,17 +69,21 @@ std::stack<glm::ivec2> graham_scan(glm::ivec2 pin[], int n) {
     // Find the point with the smallest 'y' coordinate.
     // If such a point is not unique, choose the point
     // with the smallest x coordinate.
-    Pl sm = { .p = pin[0] }; // The smallest point.
+    Pl sm       = { .p = pin[0] }; // The smallest point.
+    int smidx   = 0;               // The index of the smallest point
     for (int i = 1; i < n; i++) {
         // For comprasion let's use the fact that
         // 'y' coordinate in a ivec2 structure happens
         // to be more significant than x.
         Pl n = { .p = pin[i] };
-        sm.l = std::min(n.l, sm.l);
+        if (sm.l > n.l) {
+            sm.l  = n.l;
+            smidx = i;
+        }
     }
     p0 = sm.p; // The smallest point
-    std::swap(pin[0], p0);
-    std::sort(pin + 1, pin + n, gcompare);
+    std::swap(pin[0], pin[smidx]);
+    std::sort (pin + 1, pin + n, gcompare);
 
     std::stack<glm::ivec2> s;
 
@@ -83,7 +93,7 @@ std::stack<glm::ivec2> graham_scan(glm::ivec2 pin[], int n) {
 
     for (int i = 3; i < n; i++) {
         while( !s.empty()
-                && orientation(pin[i], s.top(), next2top(s)) != CCW
+                && orientation(next2top(s), s.top(), pin[i]) != CCW
             ) s.pop();
         s.push(pin[i]);
     }
