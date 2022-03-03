@@ -16,6 +16,10 @@ make convex
 bin/convex 100 100 200 100 100 200
 ```
 
+## Scripts
+Specifying every point is very tedious. Instead, you can use the
+[scripts](scripts/README.md)
+
 ## List of plotters
 
 - [simple](src/plotters/simple/README.md)
